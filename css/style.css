@@ -1,0 +1,1187 @@
+*
+{
+    padding: 0;
+    margin: 0 ;
+    box-sizing: border-box;
+}
+ul
+{
+    list-style: none ;
+    padding: 0 ;
+    margin: 0 ;
+}
+a
+{
+    text-decoration: none ;
+    color: #000;
+}
+li
+{
+    list-style: none ;
+}
+body
+{
+    font-family: "Noto Kufi Arabic",helvetica,sans-serif; 
+    background-color: #F6F6F6; 
+    color: #343434;
+    font-weight: 400 ;
+}
+/* ======================================================= navbar Section ======================================================= */
+/* all direct childs of navbar : left , center , right parts of navbar */
+.navbar1Container  
+{
+    padding: 10px  0 ;  
+    overflow: hidden ;
+    border-bottom: 1px solid #ff7708 ;
+}
+.navbar1Container  .globalContainer
+{ 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90% ;
+    margin: 0 auto ;
+    overflow: hidden ;
+}
+/* ******************************** right part : Contact Info ******************************** */
+/* +++++++ address +++++++++ */
+.navbar1Container  .globalContainer  .contactInfo .contact-details
+{
+    margin: 5px 0 ;
+    font-size: 16px;
+    font-style: normal;
+    /* border: 2px solid #00f ;   */
+}
+/* +++++ phone +++++++++ */
+.navbar1Container  .globalContainer  .contactInfo  .contact-details .contact-phone  a
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #622267 ;
+    padding: 0 10px ;
+    /* border: 2px solid #f00;  */
+}
+/* phone icon */
+.navbar1Container  .globalContainer  .contactInfo  .contact-details .contact-phone  a    span
+{
+    border: 1px solid #fb9e66;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50% ;
+    margin-left: 15px ;
+    text-align: center;
+}
+/* whatApp image */
+.navbar1Container  .globalContainer  .contactInfo  .contact-details .contact-phone  a    img
+{
+    margin: 0px; 
+    margin-right: 10px ;
+}
+/* ******************************** Center Part : Contact Info : Logo ******************************** */
+/* ------------------ Logo image ------------------ */
+.navbar1Container  .globalContainer   .brand-logo
+{
+    margin-right: -77px;  
+    cursor: pointer ;
+    /* border: 1px solid #0f0;  */
+}
+.navbar1Container  .globalContainer   .brand-logo  a
+{
+    width: 45px ;
+    height: 45px ;
+    border-radius: 50% ;
+    cursor: pointer ;
+}
+.navbar1Container  .globalContainer    .brand-logo  a  img
+{
+    width: 100% ;
+    height: 100% ;
+}
+/* ******************************** left part : SocialMedia contact ******************************** */
+.navbar1Container  .globalContainer   ul.social-icons
+{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:center;
+    margin: 0;
+    padding: 0;
+}
+/* socialMedia Links */
+.navbar1Container  .globalContainer   ul.social-icons  li 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 4px; 
+    /* border: 2px solid #00f;  */
+}
+/* socialMedia Links Icons */
+.navbar1Container  .globalContainer   ul.social-icons  li   a
+{
+    width: 32px;
+    height: 32px;
+    line-height: 32px ;
+    text-align: center ;
+    background: #d9d9d9;
+    color: #fff;
+    font-size: 20px ;
+    transition: all 0.3s ease-in;
+} 
+.navbar1Container  .globalContainer   ul.social-icons  li   a:hover
+{
+    background-color:#ff7708 ;
+}
+/* ////////////////////////////////////// Responsive ////////////////////////////////////// */
+@media( max-width:676px )
+{
+    /* ======================= Center Part : Contact Info : Logo ======================= */
+    .navbar1Container  .globalContainer    .brand-logo
+    {
+        display: none ;
+    }
+}
+/* ============================================================ navbar 2 ============================================================ */
+.navbar2Container
+{
+    position: relative ; 
+    display: flex;
+    justify-content: space-between;
+    width: 100% ;
+    padding: 5px 0 ;   
+    /* overflow: hidden ;   */
+    /* border: 2px solid #00f ;   */
+}
+.navbar2Container  .globalContainer
+{ 
+    display: flex;
+    justify-content: space-between;
+    width: 95% ;
+    margin: 0 auto ; 
+    /* border : 2px solid #0f0;    */
+} 
+/* ====================================== center item : Links ====================================== */
+.navbar2Container  .globalContainer  .item-center
+{
+    flex: 0 0 95% ;
+    /* border : 2px solid #00f;  */
+}
+/* ++++++++++ "overlay Layer" on "navbar" ++++++++++ */
+.menu-overlay
+{
+    position: fixed;
+    left: 0 ;
+    top: 0 ;
+    display: block ;
+    width: 100%;
+    height: 100%;
+    z-index: 1098 ;
+    background-color: rgba(0, 0, 0, 0.5);
+    visibility: hidden ;
+    opacity: 0 ;
+    transition: all 0.5s ease ;
+}
+/* when "Overlay Layer" Contains "active" class , Appear it  */
+.menu-overlay.active
+{
+    visibility: visible ;
+    opacity: 1 ;   
+}
+/* +++++++++++++++++++++++++++++++++++ navbar :  <ul></ul>  +++++++++++++++++++++++++++++++++++ */
+.navbar2Container .globalContainer .menu > ul
+{
+    overflow-x: hidden;
+}
+/* All direct <li></li> in header */
+.navbar2Container  .globalContainer  .menu > ul > li
+{
+    display: inline-block ;    
+    margin-left: 25px ;      /* change rtl */
+    line-height: 50px ; 
+    /* border: 2px solid #f00;  */
+}
+/* All direct <a></a> in header */
+.navbar2Container  .globalContainer  .menu > ul > li > a
+{
+    position: relative;
+    text-transform: capitalize;
+    font-size: 12px ;
+    color: #000;
+    transition: color 0.3s ease;
+    /* border: 2px solid #f00;          */
+}
+/* When hover on All direct <li></li> change all direct <a></a> in header */
+.navbar2Container  .globalContainer  .menu  a                       , 
+/* When Hover on All direct <a></a> inside "sub-menu" in header */
+.navbar2Container  .globalContainer  .menu > ul > li:hover > a  ,
+/* When Hover on All direct <a></a> inside "sub-menu" in header */
+.navbar2Container  .globalContainer  .menu > ul > li .sub-menu > ul > li > a:hover
+{
+    color: #ea4636;
+}
+/* All direct <li></li> that contain "sub-menu" in header */
+.navbar2Container  .globalContainer  .menu > ul > li .sub-menu
+{
+    position: absolute;
+    z-index: 500 ; 
+    background-color: #fff ;
+    box-shadow: -2px -2px 70px -25px rgba(0, 0, 0, 0.3);  /* change rtl */
+    padding: 20px 30px ;    
+    margin-top: 25px ; 
+    /* hide mega-menu */
+    visibility: hidden ;
+    opacity: 0 ;
+    transition: all 0.5s ease;
+    /* border: 2px solid #f0f;  */
+}
+/* ++++++++++++ megaMenun of links :   ++++++++++++++++++++ */
+/* +++++++++++++ Single Column Megamenu +++++++++++++ */
+/* All direct <li></li> that contain "single-column-menu" in header */
+.navbar2Container  .globalContainer  .menu > ul > li .single-column-menu
+{
+    min-width: 200px ;
+    max-width: 300px ;   
+}
+/* +++++++++++++ Multi-Columns Megamenu +++++++++++++ */
+.navbar2Container  .globalContainer  .menu > ul > li .sub-menu.mega-menu 
+{
+    left: 50% ;                      /* change rtl */ 
+    transform: translateX(-50%);  
+}
+/* All <li></li> inside "list-item" of "mega-menu" */
+.navbar2Container  .globalContainer  .menu > ul > li .sub-menu.mega-menu .list-item > ul > li
+{
+    display: block;
+    line-height: 1 ;
+    /* border : 2px solid #0ff;   */
+}
+.navbar2Container  .globalContainer  .menu > ul > li .sub-menu.mega-menu .list-item > ul > li  a
+{
+    display: block ;
+    padding: 15px 0px ; 
+    font-size: 14px ;
+    color: #555 ;
+    /* border: 2px solid #0ff;   */
+    transition: color 0.3s ease ;
+}
+.navbar2Container  .globalContainer  .menu > ul > li .sub-menu.mega-menu .list-item > ul > li  a:hover
+{
+    background-color: #ea4636 ;
+    color: #fff ;
+}
+/* all direct <li></li> that have megamenu with class "mega-menu-colum-4" */
+.navbar2Container  .globalContainer  .menu > ul > li .sub-menu.mega-menu-colum-4
+{
+    display: flex;
+    flex-wrap: wrap ;
+    max-width: 1100px ;
+    width: 100% ;
+    padding: 20px 0px ; 
+    /* border : 2px solid #00f;   */
+}
+/* All direct "list-item" inside "multi-column megamenu */
+.navbar2Container  .globalContainer  .menu > ul > li .sub-menu.mega-menu-colum-4 > .list-item
+{
+    /* we have 4 column inside megamenu , each column has width=25% */
+    flex: 0 0 25% ;
+    padding: 0 15px ;  
+    /* border : 2px solid #0f0;   */
+}
+/* "h4" of all direct "list-item" inside "multi-column megamenu */
+.navbar2Container  .globalContainer  .menu > ul > li .sub-menu.mega-menu-colum-4 > .list-item .title
+{
+    font-size: 14px ;
+    color: #ea4636;
+    font-weight: 500 ;
+    line-height: 1 ;
+    padding: 10px 0px ;
+}
+/* "image" of all direct "list-item" inside "multi-column megamenu */
+.navbar2Container  .globalContainer  .menu > ul > li .sub-menu.mega-menu-colum-4 > .list-item img
+{
+    max-width: 100% ;
+    width: 100% ;
+    /* To centeralize image */
+    vertical-align: middle ;
+    /* border: 2px solid #0ff ;  */
+}
+/* All direct <li></li> inside "sub-menu" in header */
+.navbar2Container  .globalContainer  .menu > ul > li .sub-menu > ul > li
+{
+    line-height: 1 ;
+    /* border : 2px solid #ff0;   */
+}
+/* All direct <a></a> inside "sub-menu" in header */
+.navbar2Container  .globalContainer  .menu > ul > li .sub-menu > ul > li > a
+{
+    display: inline-block ;
+    padding: 15px 0 ; 
+    font-size: 12px ;
+    color: #555 ;
+    /* border : 2px solid #00f;   */
+    transition: color 0.3s ease ;
+}
+ /* All direct <li> <a> <i></i> </a> </li> in header */
+ .navbar2Container  .globalContainer  .menu > ul > li > a  i
+{
+    margin-right: 8px ;
+    font-size: 20px ;
+    font-weight: bold ;
+    vertical-align: middle;
+}
+/* All <span></span> of All direct <a></a> inside "sub-menu" in header */
+.navbar2Container  .globalContainer  .menu > ul > li .sub-menu > ul > li > a  span ,
+.navbar2Container  .globalContainer  .menu > ul > li .sub-menu.mega-menu .list-item > ul > li > a    span
+{
+    display: block ;
+    font-size: 12px ;
+    line-height: 1.8 ; 
+    /* border: 2px solid #ff0;  */
+} 
+/* ====================================== right item ====================================== */
+.navbar2Container  .globalContainer  .item-right
+{
+    flex: 0 0 5% ;
+    display: flex ;
+    justify-content: flex-end ;     /* change rtl */
+    /* background-color: #ff0;  */
+}
+.navbar2Container  .globalContainer  .item-right  a
+{
+    display: inline-block;
+    font-size: 16px ;
+    color: #555 ;
+    margin-right: 10px ;        /* change rtl */
+    transition: color 0.3s ease ;
+}
+/* When Hover on All <a></a> inside ".item-right " in header */
+.navbar2Container  .globalContainer  .item-right  a:hover
+{
+    color: #ea4636;
+}
+/* ++++++++++++++++++ mobile screen elements ++++++++++++++++ */
+/* +++++++++++++ sidebar +++++++++++ */ 
+.mobile-menu-trigger  ,
+/* "mobile menu" header */
+.mobile-menu-head
+{
+    display: none ;   
+}
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Responsive !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  */
+/* ++++++++ Mobile Screen ++++++++ */
+@media ( min-width:992px ) 
+{
+    /* When Hover on "New" , "Shop" , "Blog" , "Pages" link , Appear "megamenu" */
+    .navbar2Container  .globalContainer  .menu > ul > li.menu-item-has-children:hover .sub-menu
+    {
+        margin-top: 0 ;
+        /* show mega-menu */
+        visibility: visible ;
+        opacity: 1 ;
+    }
+}
+/* ++++++++ Tablet Screen ++++++++ */
+@media( max-width:991px )
+{
+    .navbar2Container
+    {
+        overflow: hidden ;
+    }
+    /* ************************ navbar links : center : menu ************************ */
+    .navbar2Container  .globalContainer  .menu
+    {
+        position: fixed ;
+        top: 0 ;
+        right: 0 ;                       /* change rtl */
+        width: 320px ;
+        height: 100% ;
+        overflow: hidden ;
+        background-color: #fff ;
+        /* --------- Hide "SideBar" --------- */
+        transform: translate(100%);
+        z-index: 1099 ;
+        transition: all 0.5s ease ;
+    }
+    .navbar2Container  .globalContainer  .menu.active
+    {
+        /* --------- Show "SideBar" --------- */
+        transform: translate(0%);
+    }
+    /* +++++++++++++++++++++++ navbar : <ul></ul> +++++++++++++++++++++++ */
+    .navbar2Container  .globalContainer  .menu  .menu-main
+    {
+        height: 100% ;
+        overflow-x: hidden ;
+        overflow-y: auto ;
+    }
+    /* All direct <li></li> in header */
+    .navbar2Container  .globalContainer  .menu > ul > li
+    {
+        display: block ;
+        margin: 0 ;
+        line-height: 1 ;
+    }
+    /* ++++++++++ "New" , "Shop" , "Blog"   , "Pages" : megamenus ++++++++++ */
+    .navbar2Container  .globalContainer  .menu > ul > li .sub-menu ,
+    .navbar2Container  .globalContainer  .menu > ul > li .sub-menu.mega-menu
+    {
+        display: none ; 
+        position: absolute; 
+        top: 0 ;
+        left: 0 ;
+        width: 100% ;
+        min-width: auto ;
+        max-width: none;
+        height: 100% ;
+        overflow-y: auto ;
+        box-shadow: none ;
+        visibility: visible;
+        opacity: 1 ;
+        margin: 0 ;
+        padding: 15px ;
+        padding-top: 65px ;
+        transform: translateX(0%);
+        /* background-color:gray ;  */
+        /* border: 3px solid #ff0 ;   */
+    }
+    /* Active megamenu :     */
+    .navbar2Container  .globalContainer  .menu > ul > li .sub-menu.active           ,
+    .navbar2Container  .globalContainer  .menu > ul > li .sub-menu.mega-menu.active
+    {
+        display: block;
+    }
+    /* +++++++++++++++++++++++++ SlideLeft Animation +++++++++++++++++++++++++ */
+    @keyframes SlideLeft
+    {
+        0%
+        {
+            opacity: 1 ;
+            transform: translateX(0%);
+        }
+        100%
+        {
+            opacity: 0 ;
+            transform: translateX(100%);   
+        }
+    }
+    /* +++++++++++++++++++++++++ slideRight Animation +++++++++++++++++++++++++ */
+    @keyframes slideRight
+    {
+        0%
+        {
+            opacity: 0 ;
+            transform: translateX(100%);
+        }
+        100%
+        {
+            opacity: 1 ;
+            transform: translateX(0%);   
+        }
+    }
+    /* each "Column" in the "4 column megamenu"   */
+    .navbar2Container  .globalContainer  .menu > ul > li .sub-menu.mega-menu-colum-4 
+    {
+        display: none ; 
+        /* border: 2px solid #000 ;   */
+    }
+    /* all <img> in each "Column" in the "4 column megamenu"   */
+    .navbar2Container  .globalContainer  .menu > ul > li .sub-menu.mega-menu-colum-4 > .list-item    img
+    {
+        margin-top: 0 ;
+    }
+    /* all <h4></h4> in each "Column" in the "4 column megamenu"   */
+    .navbar2Container  .globalContainer  .menu > ul > li .sub-menu.mega-menu-colum-4 > .list-item.text-center .title
+    {
+        margin-bottom: 20px ; 
+    }
+    /* each "Column" in the "4 column megamenu"   */
+    .navbar2Container  .globalContainer  .menu > ul > li .sub-menu.mega-menu-colum-4 > .list-item
+    {
+        /* each column of megamenu "width = 100%" */
+        flex: 0 0 100% ;
+        padding: 0 ; 
+        /* border: 2px solid #f0f; */
+    }
+    .navbar2Container  .globalContainer  .menu > ul > li .sub-menu.mega-menu .list-item > ul
+    {
+        margin-bottom: 15px ;
+        /* border: 5px solid #00f ;   */
+    }
+    /* all <a></a> of <li></li> of links "Blog" , "Pages" */
+    .navbar2Container  .globalContainer  .menu > ul > li .sub-menu > ul > li > a     ,
+    /* all <a></a> of <li></li> of links of megamenu "Men's Fashion" , "Beauty" , "Children's Fashion" , "Furnitures" */
+    .navbar2Container  .globalContainer  .menu > ul > li .sub-menu.mega-menu .list-item > ul > li > a
+    {
+        display: block ;
+        padding: 15px 0 ; 
+    }
+    /* All direct <li> <a></a> </li> in header */
+    .navbar2Container  .globalContainer  .menu > ul > li > a
+    {
+        display: block;
+        height: 50px ;
+        line-height: 50px ;
+        margin: 0  ;
+        padding: 0 50px 0px 15px  ; 
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        /* border: 2px solid #f00;  */
+    }
+    /* All direct <li> <a> <i></i> </a> </li> in header */
+    .navbar2Container  .globalContainer  .menu > ul > li > a  i
+    {
+        position: absolute ;
+        top: 0 ;
+        left: 0 ;           /* change rtl */
+        width: 56px ;
+        height: 50px ;
+        line-height: 50px ;
+        text-align: center ;
+        font-size: 18px ;
+        font-weight: bold ;
+        transform: rotate(90deg); 
+    }
+    /* =================== item : right : menu =================== */
+    .navbar2Container  .globalContainer  .item-right
+    {
+        align-items: center;
+    }
+    /* =================== item : center : menu =================== */
+    .navbar2Container  .globalContainer  .item-center
+    {
+        /* move the center part of navbar "navbar links" to the "right part" where "order = 3" */
+        /* "order=1" will move the "part" to "next" , "order=-1" will move the "part" to "previous" , "order=0" no move */
+        order: 3 ;
+        /* make the "navbar links" take all the "row2" */
+        flex: 0 0 100% ;
+        /* border: 2px solid #f0f;  */
+    }
+    /* ++++++++++ menubar button +++++++++++ */ 
+    .mobile-menu-trigger
+    {
+        display: flex ;
+        justify-content: center;
+        align-items: center;
+        width: 30px ;
+        height: 30px ;
+        margin-right: 15px ;   /* change rtl */
+        cursor: pointer;
+        /* border: 1px solid #444 ;  */
+    }
+    /* menubar button : bars  */
+    .navbar2Container  .globalContainer  .mobile-menu-trigger span
+    {
+        position: relative;
+        display: block ;
+        width: 24px ;
+        height: 2px ;
+        background-color: #333 ;
+    }   
+     /* menubar button : "top" , "bottom" bar  */
+     .navbar2Container  .globalContainer  .mobile-menu-trigger span::before ,
+     .navbar2Container  .globalContainer  .mobile-menu-trigger span::after
+     {
+        content: "";
+        position: absolute;
+        left: 0 ;       /* change rtl */
+        width: 100%;
+        height: 100% ;
+        background-color: #333 ;
+     }
+      /* menubar button : "top" bar  */
+      .navbar2Container  .globalContainer  .mobile-menu-trigger span::before 
+      {
+        top: -6px ;
+      }
+       /* menubar button : "bottom" bar  */
+     .navbar2Container  .globalContainer  .mobile-menu-trigger span::after
+     {
+        top: 6px ;
+     }
+     /* ++++++++++++++++++++ sidebar +++++++++++++++++++++ */ 
+    /* "mobile menu" header */
+    .navbar2Container  .globalContainer  .header-item   .mobile-menu-head
+    {
+        position: sticky; 
+        top: 0 ;
+        display: flex ;   
+        justify-content: space-between ;
+        align-items: center;
+        height: 50px ;
+        font-size: 22px ;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        z-index: 5012 ;
+        background-color: #fff ;
+        /* border: 2px solid #f0f ;   */
+    }
+    /* "Go Back" icon */
+    .navbar2Container  .globalContainer  .header-item   .mobile-menu-head    .go-back
+    {
+        display: none ;
+        width: 50px ;
+        height: 50px ;
+        line-height: 50px ;
+        cursor: pointer;
+        text-align: center;
+        color: #000 ;
+        font-size: 20px ;
+        border-left: 1px solid rgba(0,0,0,0.1);  /* change rtl */
+        /* border: 2px solid #f00 ;  */
+    }
+    /* "go back icon" megaMenu  */
+    .navbar2Container  .globalContainer  .header-item   .mobile-menu-head.active .go-back
+    {
+
+        display: block;
+    }
+    /* "current menu" title */
+    .navbar2Container  .globalContainer  .header-item   .mobile-menu-head   .current-menu-title
+    {
+        font-size: 16px ;
+        font-weight: 500 ;
+        color: #000 ;
+        /* border: 2px solid #0f0 ;  */
+    }
+    /* "close" icon */
+    .navbar2Container  .globalContainer  .header-item   .mobile-menu-head   .mobile-menu-close
+    {
+        width: 50px ;
+        height: 50px ;
+        line-height: 50px ;
+        text-align: center ;
+        color: #000;
+        font-size: 25px ;
+        cursor: pointer;
+        border-right: 1px solid rgba(0, 0, 0, 0.1);       /* change rtl */
+        /* border: 2px solid #00f ;  */
+    }
+}
+/* ==================================================== Slider Section ====================================================  */
+.sliderContainer
+{
+    direction: ltr; 
+    position: relative;
+    display: block;
+    /* slide width  sliderContainer  width */
+    width: 100% ;
+    height: 400px ;
+    overflow: hidden;
+    margin: 0px auto ; 
+    z-index: 400 ;
+    /* border: 5px solid #ff0 ;   */
+}
+/* ------------------ sliderContainer of Slider ------------------  */
+.sliderContainer .slides
+{
+    /* to move "Arrows" According to "carousel" */
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%  ;
+    height: 100% ;
+    border-radius: 3px ;
+    background-color: #fff ;
+    /* border: 5px solid #f0f ;   */
+}
+/* ------------------ Slides of Slider ------------------  */
+.sliderContainer .slides  .slide
+{
+    position: relative;
+    min-width: 100% ;
+    /* border: 5px solid #00f ;  */
+}
+/* ------------------  "image" of slide of Slider ------------------  */
+.sliderContainer .slides  .slide  img
+{
+    width: 100%; 
+    height: 100% ;
+}
+/* ------------------ Slide info ------------------  */
+.sliderContainer .slides  .slide  .slide-content
+{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 500px ;
+    height: 200px ;
+    line-height: 200px ;
+    font-size: 20px ;
+    text-align: center;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* border: 2px solid #f00;  */
+}
+/* ------------------ slider controls ------------------  */
+.sliderContainer  .slide-controls
+{
+    position: absolute;
+    left: 0 ;
+    top: 50% ;
+    transform: translateY(-50%);
+    width: 100% ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px ;
+    /* border: 5px solid #0ff ;  */
+}
+/* -------------- Slider arrows : prev , next Arrow -------------- */
+.sliderContainer .slide-controls #prev-btn ,
+.sliderContainer .slide-controls #next-btn
+{
+    position: absolute ;
+    top: 50% ;
+    transform: translateY(-50%);
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 30px ;
+    border: none ;
+    padding: 0px ; 
+    color: #fff ;
+}
+.sliderContainer .slide-controls #prev-btn:focus ,
+.sliderContainer .slide-controls #next-btn:focus
+{
+    outline: none;
+}
+/* ++++ left arrow +++++ */
+.sliderContainer .slide-controls  #prev-btn
+{
+    left: 0px ;
+}
+/* ++++ left arrow +++++ */
+.sliderContainer  .slide-controls  #next-btn
+{
+    right: 0px ;
+}
+/* ++++++++++++++++++++++++++++++++++++ Responsive ++++++++++++++++++++++++++++++++++++ */
+@media ( max-width:996px )
+{
+    /* ------------------ Slide info ------------------  */
+    .sliderContainer .slides  .slide  .slide-content
+    {
+        font-size: 14px ;
+    }   
+}
+/* ======================================================= gallery Section ======================================================= */
+.gallery
+{
+    /* direction: ltr; */
+	width: 100%; 
+	height: auto ;
+    	overflow: hidden ;
+	background-color: #fff ;
+    /* border: 2px solid #f0f; */
+}
+.gallery    .galleryContainer
+{
+	width: 90%; 
+	height: auto ;
+	overflow: hidden ;  
+	margin: 20px auto ;
+    /* border: 2px solid #0f0;  */
+}
+/* ++++++++++++++++++++++ tabs ++++++++++++++++++ */
+.gallery    .galleryContainer   .labelGalleryContainer
+{
+    overflow: hidden ;
+    text-align: center ;
+	margin-top: 20px;
+	margin-bottom: 20px;
+    /* border: 2px solid #00f;      */
+}
+.gallery    .galleryContainer   .labelGalleryContainer  label
+{
+    display: inline-block ;
+	width: 240px;
+	margin: 0.8% ;
+	background-color: #622267 ; 
+	color: #fff;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	padding-left: 0.5%;
+	padding-right: 0.5%;
+	cursor: pointer ;
+	text-transform: capitalize ;
+	font-size: 16px;
+	transition: 0.4s ;
+}
+.gallery    .galleryContainer   .labelGalleryContainer  label.active , 
+.gallery    .galleryContainer   .labelGalleryContainer  label:hover
+{
+	background-color: rgb(105, 92, 151) ;
+}
+/* ************ product gallery blocks : All , Phone , Laptop , Headphone , Shoes ************** */
+.gallery    .galleryContainer    .productGalleryBlocks
+{
+	width: 100% ;
+	height: auto ;
+	overflow: hidden ; 
+    margin: 20px 0 ;
+	/* border: 2px solid #000;   */
+}
+/* ++++++++++++++++++++ <ul></ul> +++++++++++++++++++ */
+.gallery    .galleryContainer  .productGalleryBlocks    .productGalleryBlocksUl
+{
+	width: 300% ;
+	height: auto;
+	overflow: hidden ; 
+	list-style: none ;
+	padding: 0 ;
+	/*ا smooth gallery navbar link */
+	transition: 2s ease-in-out ;
+    /* border: 2px solid #f00;   */
+}
+/* ++++++++++++++++++++ <li></li> +++++++++++++++++++ */
+/* --- the style of 6 blocks of product gallery : each <li></li> of 6 <li></li> : : All , Phone , Laptop , Headphone , Shoes , watches ---*/
+.gallery    .galleryContainer  .productGalleryBlocks    .productGalleryBlocksUl  li
+{
+	/* total_width = 100 / 3 =  33.33333%  , we have 3 <li></li>	*/
+	width: 31.3333%;
+    height: auto;
+    float: right;
+    overflow: hidden ;
+    margin: 1%;
+	/* border: 2px solid #00f;   */
+}
+/* ++++++++++++++++++++ product Box +++++++++++++++++++ */
+.productGalleryBlocksUl  li  .product
+{
+	width: 23% ;
+	float: right ;
+	height: auto ;
+	overflow: hidden ;
+    margin: 0  1% ; 
+	background-color : rgb(23, 35, 68); 
+    border-bottom-left-radius: 10px ;
+    border-bottom-right-radius: 10px ;
+    cursor: pointer;
+    border: 4px solid #622267 ; 
+}
+/* ++++++++++++++++++++++++ Product : image container ++++++++++++++++++++++++ */
+.product   .imageProductArrivalCont 
+{
+    position: relative;
+    height: 200px ;
+    overflow: hidden;
+    z-index: 1 ;
+    /* border: 2px solid #0f0;  */
+}
+/* ========== image :  overlay ========== */
+.product   .imageProductArrivalCont .productOverlayArrival 
+{
+    opacity: 0; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: rgba(18,160,195,0.6);;
+    transition: all 0.4s ease-out;
+    text-align: center;
+}
+/* ========== image : overlay : icon ========== */
+.product   .imageProductArrivalCont .productOverlayArrival   i
+{
+    position: absolute;
+    left: 50% ;
+    top: 50% ;
+    transform: translate(-50% , -50%);
+    width: 50px ;
+    height: 50px ;
+    line-height: 50px ;
+    font-size: 18px ;
+    border-radius: 50% ;
+    color: #fff ;
+    border: 2px solid #fff ;
+}
+/* ========== When hover on image : product box : overlay layer ========== */
+.product .imageProductArrivalCont:hover    .productOverlayArrival
+{
+    opacity: 1  ;
+    transform: rotateY(180deg);
+    z-index: 222 ;
+}
+.product   .imageProductArrivalCont     img
+{
+    width: 100% ; 
+    object-fit: cover ; 
+    height: 202px ;
+    overflow: hidden;
+    z-index: 111 ;
+    transition: all 0.2s ease-in;
+}
+.product .imageProductArrivalCont:hover    img
+{
+    transform: scale(1.5,1.5);
+}
+/* +++++++++++++++++++++++++++++++ sub_row2 :  info of product +++++++++++++++++++++++ */
+.product   .productInfo 
+{
+    height: auto;
+    overflow: hidden;
+    /* border: 2px solid #f0f;  */
+}
+/*  sub_row2 :  paragraph1  */
+.product   .productInfo   .para1  
+{
+    color: #fff ;
+    text-align: center ;
+    font-size: 14px ;
+    margin-top: 10px ;
+}
+.product   .productInfo  .para2 , 
+.product   .productInfo  .para3 , 
+.product   .productInfo  .para4
+{
+    padding: 0 5px ;
+    margin: 10px 0px ;
+    font-size: 14px ;
+    color: rgb(0, 0, 0);
+    background-color: #fff ;
+} 
+/* +++++++++++++++++++++++++ Show More button +++++++++++++++++++++++++ */
+.gallery    .galleryContainer   .showMore
+{
+    display: block ;
+    margin: 20px auto ;
+    text-align: center ;
+    /* border: 2px solid #f00 ; */
+}
+.gallery    .galleryContainer   .showMore      .showMoreBtn
+{
+    padding: 10px  30px ;
+    border: none ;
+    outline: none ;
+    color: #fff ;
+    font-size: 18px ;
+    font-weight: bold ;
+    cursor: pointer;
+    background-color: #111111;
+    transition: all 0.3s ease-in-out;
+}
+.gallery    .galleryContainer   .showMore      .showMoreBtn:hover
+{
+    background-color: darkorange ;
+}
+
+/* ############################################## Responsive : product Gallery ############################################# */
+/* +++++++++++++++++ Mobile Screen +++++++++++++++++ */
+@media( min-width:0px) and (max-width:676px)
+{
+	/*  /////////////////////////// product container : product 1 ///////////////////////////  */
+    .productGalleryBlocksUl li .product 
+    {
+        width: 95%;
+        margin: 20px auto;
+        float: none; 
+    }
+}
+/* +++++++++++++++++ Tablet Screen +++++++++++++++++ */
+@media( min-width:677px) and (max-width:1100px)
+{
+	/*  /////////////////////////// product container : product 1 ///////////////////////////  */
+    .productGalleryBlocksUl li .product 
+    {
+        width: 48%;
+        margin: 10px 1% ;
+    }
+}
+/* ======================================================= offers Section ======================================================= */
+.offers
+{
+    width: 100% ;
+    height: auto ;
+    overflow: hidden;
+    background-color: #fff ;
+    /* border: 2px solid #f0f;  */
+}
+/* +++++++++++++++++++ offers header +++++++++++++++++++ */
+.offers   .offersHead  
+{
+    padding : 10px 30px ;
+    color: #fff ;
+    background: linear-gradient(rgb(0, 0, 0), rgb(24, 169, 169)); 
+    /* border: 2px solid #f00 ;  */
+}
+/* offers header icon */
+.offers     .offersHead     i
+{
+    vertical-align: middle;
+    font-size: 30px ;
+    transform: rotateY(-180deg);
+}
+/* header <span></span> */
+.offers     .offersHead    span
+{
+    font-size: 20px ;
+    margin-right: 10px ;
+}
+/* +++++++++++++++++++ offers body +++++++++++++++++++ */
+.offers  .globalContainer
+{ 
+   display: block ;
+    width: 95% ;
+    height: auto ;
+    overflow: hidden ;
+    margin: 25px auto ; 
+    /* border : 2px solid #0f0;     */
+} 
+.offers  .globalContainer   .offersBoxs
+{
+   float: right ;
+   width: 23% ;
+   height: auto;
+   margin: 10px 1% ;
+   overflow: hidden ;
+   padding: 10px ;
+   border-radius: 20px ;
+   cursor: pointer;
+   border-top: 7px solid #111111;
+   border-bottom: 7px solid #111111;    
+   transition: all 0.3s ease-in-out ;
+}
+.offers  .globalContainer   .offersBoxs:hover
+{
+    background-color: #326bad ;
+    color: #fff ;
+}
+/* ----- box image ----- */
+.offers  .globalContainer   .offersBoxs .imgCont    img
+{
+    width: 100% ;
+}
+/* ----- box info ----- */
+.offers  .globalContainer   .offersBoxs .boxInfo   
+{
+    text-align: center ;
+}
+
+/* ++++++++++++++++++++++++++++++++++ Responsive ++++++++++++++++++++++++++++++++++ */
+@media (min-width:0px) and (max-width : 992px ) 
+{
+    .offers  .globalContainer   .offersBoxs
+    {
+        width: 46% ;
+        margin: 20px 1% ;
+    }
+}
+/* ======================================================= line separator  ======================================================= */
+.lineSeparator
+{
+    width: 100% ;
+    height: 1px ;
+    margin-bottom: 20px ;
+    background-color: rgb(161,161,161) ;
+} 
+/* ======================================================= delivery Section ======================================================= */
+.delivery
+{
+	width: 100%; 
+	height: auto ;
+    overflow: hidden ;
+    margin: 20px 0;
+	background-color: #fff ;
+    /* border: 2px solid #f0f;  */
+}
+.delivery    .deliveryContainer
+{
+    display: flex ;
+    justify-content: space-around ;
+    align-items: center;
+	width: 90%; 
+	height: auto ;
+	overflow: hidden ;  
+	margin: 0px auto ;
+    padding: 10px 20px ;
+    border-radius: 20px ;
+    border-top: 5px solid #111111;
+    border-bottom: 5px solid #111111;
+    transition: all 0.3s ease-in-out ;
+    /* border: 2px solid #0f0;   */
+}
+.delivery    .deliveryContainer:hover
+{
+    background-color: #bf3976 ;
+    color: #fff ;
+}
+/* ++++++++++++++++++++ left part : icon  ++++++++++++++++++++ */
+.delivery   .deliveryContainer  .deliveryIcon   i
+{
+    font-size: 18px ; 
+}
+.delivery   .deliveryContainer    .deliveryInfo
+{
+    text-align: center;
+    font-size: 18px ;
+    /* line-height: 2 ;  */
+    padding-right: 20px ;
+    /* border: 2px solid #00f;    */
+}
+/* ++++++++++ Whatsapp image +++++++++++ */
+.delivery   .deliveryContainer    .deliveryInfo  img
+{
+    vertical-align: middle ; 
+    width: 100px ;
+    height: auto ;
+    margin-top: 7px ; 
+    /* border: 2px solid #f00 ;  */ 
+}
+/* ++++++++++++++++++++++++++++++++++++++ Responsive ++++++++++++++++++++++++++++++++++++++++++ */
+@media ( min-width:0px ) and ( max-width : 767px ) 
+{
+    .delivery .deliveryContainer .deliveryInfo 
+    {
+        font-size: 16px ;
+    }
+}
+@media ( min-width:768px ) and ( max-width : 1100px ) 
+{
+    .delivery .deliveryContainer .deliveryInfo 
+    {
+        font-size: 18px ;
+    }
+}
+/* ======================================================= delivery Section ======================================================= */
+.delivery2
+{
+    width: 100% ;
+    height: auto ;
+}
+/* ///////////////// container /////////////////  */
+.delivery2  .box-container
+{
+    width: 90% ;
+    margin: 0 auto ;
+    display: flex ;
+}
+/* +++++++++++++++ box +++++++++++++++++ */
+.delivery2  .box-container  .box
+{
+    display: flex ;
+    border-radius: 10px ;
+    padding: 10px ;
+    margin: 0 auto ;
+    border-radius: 20px ;
+    cursor: pointer;
+    border-top: 7px solid #111111;
+    border-bottom: 7px solid #111111;    
+    transition: all 0.3s ease-in-out ;
+}
+.delivery2  .box-container  .box:hover
+{
+    background-color: #bf3976 ;
+    color: #fff ;
+}
+/* ++++++++++++ left part : icon ++++++++++++ */
+.delivery2  .box-container  .box      .deliveryIcon
+{
+    margin-left: 0% ;
+}  
+
+/* ++++++++++++ right part : icon ++++++++++++ */
